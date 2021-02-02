@@ -1,0 +1,52 @@
+.container, .col1, .col2 {
+   display: flex; 
+   flex-direction: column;
+}
+
+#sectionMiddle, #sectionBottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+#sectionBottom, #sectionTop {
+    margin-top: 16px;
+}
+
+.col1, .col2 {
+    border: 1px solid lightgray;
+    padding: 28px;
+    border-radius: 6px;
+}
+
+.col1 {
+    width: 40%;
+    margin-right: 16px;
+}
+
+.col2 {
+    width: 60%;
+}
+
+.mdl-textfield {
+    width: 100%;
+}
+
+#sectionQR {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    #sectionMiddle, #sectionBottom {
+        flex-direction: column;
+        margin-top: 10px;
+     }
+    .col1, .col2 {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    .col2 {
+        margin-top: 10px;
+    }
+}
