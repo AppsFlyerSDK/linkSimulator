@@ -15,6 +15,7 @@
     </head>
     <body>
         <div class="container-fluid">
+            <h1 id="pageName">OneLink Simulator</h1>
             <div id="sectionTop">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <input class="mdl-textfield__input" type="text" id="baseURL">
@@ -72,17 +73,23 @@
             <div id="sectionBottom">
                 <div class="col1">
                     <h3>Deeplink Value</h3>
-                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="apples">
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect deeplink-radio" for="apples">
                         <input type="radio" id="apples" class="mdl-radio__button" name="deep_link_value" value="apples">
                         <span class="mdl-radio__label">Apples</span>
                     </label>
-                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="bananas">
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect deeplink-radio" for="bananas">
                         <input type="radio" id="bananas" class="mdl-radio__button" name="deep_link_value" value="bananas">
                         <span class="mdl-radio__label">Bananas</span>
                     </label>
-                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="peaches">
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect deeplink-radio" for="peaches">
                         <input type="radio" id="peaches" class="mdl-radio__button" name="deep_link_value" value="peaches">
                         <span class="mdl-radio__label">Peaches</span>
+                    </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect deeplink-radio" for="custom">
+                        <input type="radio" id="custom" class="mdl-radio__button" name="deep_link_value" value="custom">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="deeplink_custom_value">
+                            <input class="mdl-textfield__input" type="text" id="custom_value" placeholder="Custom">
+                        </div>
                     </label>
                 </div>
                 <div class="col2">

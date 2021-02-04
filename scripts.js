@@ -25,6 +25,8 @@ function getRadioVal() {
         output = "bananas";
     } else if (document.getElementById('peaches').checked) {
         output = "peaches";
+    } else if (document.getElementById('custom').checked) {
+        output = document.getElementById('custom_value').value;
     }
 
     return output
@@ -61,6 +63,8 @@ function generateURL() {
 
         document.getElementById("output").value = finalURL
 
+        const qrLocation = document.getElementById("qrcode")
+
         // Options
         var options = {
             text: finalURL,
@@ -68,6 +72,8 @@ function generateURL() {
         };
         
         // Create QRCode Object
-        new QRCode(document.getElementById("qrcode"), options);
+        new QRCode(qrLocation, options);
+
+        qrLocation.scrollIntoView({behavior: "smooth"})
     }
 }
