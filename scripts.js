@@ -39,7 +39,8 @@ function generateURL() {
     var url = getParamValue('baseURL');
     var pid = getParamValue('pid');
     var params = [
-        'c','af_channel','af_adset','af_ad','af_sub1','af_ios_url','af_android_url','af_web_dp'
+        'c','af_sub1','af_ios_url','af_android_url','af_web_dp','af_num'
+        //,'af_channel','af_adset','af_ad'
     ]
 
     if(url) {

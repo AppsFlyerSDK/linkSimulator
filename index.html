@@ -37,14 +37,15 @@
                     <h3>Attribution Params</h3>
 
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" id="pid">
+                        <input class="mdl-textfield__input" type="text" id="pid" value="QR_code" readonly>
                         <label class="mdl-textfield__label" for="pid">Media Source</label>
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" id="c">
+                        <input class="mdl-textfield__input" type="text" id="c"
+                        pattern="[a-zA-Z0-9._%+-]+" title="No special characters!">
                         <label class="mdl-textfield__label" for="c">Campaign</label>
                     </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <!-- <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="text" id="af_channel">
                         <label class="mdl-textfield__label" for="af_channel">Channel</label>
                     </div>
@@ -55,7 +56,7 @@
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="text" id="af_ad">
                         <label class="mdl-textfield__label" for="af_ad">Ad</label>
-                    </div>
+                    </div> -->
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="text" id="af_sub1">
                         <label class="mdl-textfield__label" for="af_sub1">af_sub1</label>
@@ -101,6 +102,17 @@
                             <input class="mdl-textfield__input" type="text" id="custom_value" placeholder="Custom">
                         </div>
                     </label>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <select class="mdl-textfield__input" id="af_num" name="af_num">
+                            <option></option>
+                            <option value="1">1</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="99">99</option>
+                        </select>
+                        <label class="mdl-textfield__label" for="af_num">Amount</label>
+                    </div>
                 </div>
                 <div class="col2">
                     <h3>URL Output</h3>
