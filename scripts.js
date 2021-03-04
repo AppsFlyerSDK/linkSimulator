@@ -67,7 +67,7 @@ function generateURL() {
 
         // Options
         var options = {
-            text: finalURL,
+            text: finalURL += "&af_qr=true",
             quietZone: 10,
         };
         
