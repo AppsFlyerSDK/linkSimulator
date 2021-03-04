@@ -37,14 +37,25 @@
                     <h3>Attribution Params</h3>
 
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" id="pid">
+                        <!-- <input class="mdl-textfield__input" type="text" id="pid" value="QR_code" readonly> -->
+                        <select class="mdl-textfield__input" id="pid" name="pid">
+                            <option value="QR_code">QR_code</option>
+                            <option value="Email">Email</option>
+                            <option value="Owned_Media">Owned_Media</option>
+                        </select>
                         <label class="mdl-textfield__label" for="pid">Media Source</label>
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" id="c">
+                        <!-- <input class="mdl-textfield__input" type="text" id="c"
+                        pattern="[a-zA-Z0-9._%+-]+" title="No special characters!"> -->
+                        <select class="mdl-textfield__input" id="c" name="c">
+                            <option></option>
+                            <option value="Promo_50">Promo_50</option>
+                            <option value="WordOfMouth">WordOfMouth</option>
+                        </select>
                         <label class="mdl-textfield__label" for="c">Campaign</label>
                     </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <!-- <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="text" id="af_channel">
                         <label class="mdl-textfield__label" for="af_channel">Channel</label>
                     </div>
@@ -55,9 +66,14 @@
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="text" id="af_ad">
                         <label class="mdl-textfield__label" for="af_ad">Ad</label>
-                    </div>
+                    </div> -->
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" id="af_sub1">
+                        <!-- <input class="mdl-textfield__input" type="text" id="af_sub1"> -->
+                        <select class="mdl-textfield__input" id="af_sub1" name="af_sub1">
+                            <option></option>
+                            <option value="string1">string1</option>
+                            <option value="string2">string2</option>
+                        </select>
                         <label class="mdl-textfield__label" for="af_sub1">af_sub1</label>
                     </div>
 
@@ -66,15 +82,31 @@
                     <h3>Redirection Params</h3>
 
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" id="af_ios_url">
+                        <!-- <input class="mdl-textfield__input" type="text" id="af_ios_url"> -->
+                        <select class="mdl-textfield__input" id="af_ios_url" name="af_ios_url">
+                            <option></option>
+                            <option value="https%3A%2F%2Fchayev.github.io%2Fappsflyer-smartbanner-fruits%2F">Landing Page</option>
+                            <option value="https%3A%2F%2Fchayev.github.io%2Fappsflyer-smartbanner-fruits%2Fproducts%2F">Product Page</option>
+                        </select>
                         <label class="mdl-textfield__label" for="af_ios_url">iOS</label>
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" id="af_android_url">
+                        <!-- <input class="mdl-textfield__input" type="text" id="af_android_url"> -->
+                        <select class="mdl-textfield__input" id="af_android_url" name="af_android_url">
+                            <option></option>
+                            <option value="https%3A%2F%2Fchayev.github.io%2Fappsflyer-smartbanner-fruits%2F">Landing Page</option>
+                            <option value="https%3A%2F%2Fchayev.github.io%2Fappsflyer-smartbanner-fruits%2Fproducts%2F">Product Page</option>
+                        </select>
                         <label class="mdl-textfield__label" for="af_android_url">Android</label>
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" id="af_web_dp">
+                        <!-- <input class="mdl-textfield__input" type="text" id="af_web_dp"> -->
+                        <select class="mdl-textfield__input" id="af_web_dp" name="af_web_dp">
+                            <option></option>
+                            <option value="https%3A%2F%2Fwww.amazon.com%2F">Amazon</option>
+                            <option value="https%3A%2F%2Fwww.yelp.com%2F">Yelp</option>
+                            <option value="https%3A%2F%2Fwww.google.com%2F">Google</option>
+                        </select>
                         <label class="mdl-textfield__label" for="af_web_dp">Web</label>
                     </div>
 
@@ -95,12 +127,23 @@
                         <input type="radio" id="peaches" class="mdl-radio__button" name="deep_link_value" value="peaches">
                         <span class="mdl-radio__label">Peaches</span>
                     </label>
-                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect deeplink-radio" for="custom">
+                    <!-- <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect deeplink-radio" for="custom">
                         <input type="radio" id="custom" class="mdl-radio__button" name="deep_link_value" value="custom">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="deeplink_custom_value">
                             <input class="mdl-textfield__input" type="text" id="custom_value" placeholder="Custom">
                         </div>
-                    </label>
+                    </label> -->
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <select class="mdl-textfield__input" id="af_num" name="af_num">
+                            <option></option>
+                            <option value="1">1</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="99">99</option>
+                        </select>
+                        <label class="mdl-textfield__label" for="af_num">Amount</label>
+                    </div>
                 </div>
                 <div class="col2">
                     <h3>URL Output</h3>
