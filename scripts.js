@@ -25,9 +25,10 @@ function getRadioVal() {
         output = "bananas";
     } else if (document.getElementById('peaches').checked) {
         output = "peaches";
-    } else if (document.getElementById('custom').checked) {
-        output = document.getElementById('custom_value').value;
-    }
+    } 
+    // else if (document.getElementById('custom').checked) {
+    //     output = document.getElementById('custom_value').value;
+    // }
 
     return output
 }
