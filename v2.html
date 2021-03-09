@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <script src="easy.qrcode.js" type="text/javascript" charset="utf-8"></script>
+        <script src="scripts.js" type="text/javascript" charset="utf-8"></script>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-green.min.css" />        
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+
+        <link rel="stylesheet" href="style.css" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-188913527-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-188913527-1');
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1 id="pageName">OneLink Simulator</h1>
+            <div id="sectionTop">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="baseURL" value="https://onelink-sim.onelink.me/coiD" readonly>
+                    <label class="mdl-textfield__label" for="baseURL">Base URL</label>
+                </div>
+            </div>
+            <div id="sectionMiddle" style="display: none;">
+                <div class="col1">
+                    <h3>Attribution Params</h3>
+
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <!-- <input class="mdl-textfield__input" type="text" id="pid" value="QR_code" readonly> -->
+                        <select class="mdl-textfield__input" id="pid" name="pid">
+                            <option value="QR_code">QR_code</option>
+                            <option value="Email">Email</option>
+                            <option value="Owned_Media">Owned_Media</option>
+                        </select>
+                        <label class="mdl-textfield__label" for="pid">Media Source</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <!-- <input class="mdl-textfield__input" type="text" id="c"
+                        pattern="[a-zA-Z0-9._%+-]+" title="No special characters!"> -->
+                        <select class="mdl-textfield__input" id="c" name="c">
+                            <option></option>
+                            <option value="Promo_50">Promo_50</option>
+                            <option value="WordOfMouth">WordOfMouth</option>
+                        </select>
+                        <label class="mdl-textfield__label" for="c">Campaign</label>
+                    </div>
+                    <!-- <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="af_channel">
+                        <label class="mdl-textfield__label" for="af_channel">Channel</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="af_adset">
+                        <label class="mdl-textfield__label" for="af_adset">Ad Set</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="af_ad">
+                        <label class="mdl-textfield__label" for="af_ad">Ad</label>
+                    </div> -->
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <!-- <input class="mdl-textfield__input" type="text" id="af_sub1"> -->
+                        <select class="mdl-textfield__input" id="af_sub1" name="af_sub1">
+                            <option></option>
+                            <option value="string1">string1</option>
+                            <option value="string2">string2</option>
+                        </select>
+                        <label class="mdl-textfield__label" for="af_sub1">af_sub1</label>
+                    </div>
+
+                </div>
+                <div class="col2">
+                    <h3>Redirection Params</h3>
+
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <!-- <input class="mdl-textfield__input" type="text" id="af_ios_url"> -->
+                        <select class="mdl-textfield__input" id="af_ios_url" name="af_ios_url">
+                            <option></option>
+                            <option value="https%3A%2F%2Fchayev.github.io%2Fappsflyer-smartbanner-fruits%2F">Landing Page</option>
+                            <option value="https%3A%2F%2Fchayev.github.io%2Fappsflyer-smartbanner-fruits%2Fproducts%2F">Product Page</option>
+                        </select>
+                        <label class="mdl-textfield__label" for="af_ios_url">iOS</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <!-- <input class="mdl-textfield__input" type="text" id="af_android_url"> -->
+                        <select class="mdl-textfield__input" id="af_android_url" name="af_android_url">
+                            <option></option>
+                            <option value="https%3A%2F%2Fchayev.github.io%2Fappsflyer-smartbanner-fruits%2F">Landing Page</option>
+                            <option value="https%3A%2F%2Fchayev.github.io%2Fappsflyer-smartbanner-fruits%2Fproducts%2F">Product Page</option>
+                        </select>
+                        <label class="mdl-textfield__label" for="af_android_url">Android</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <!-- <input class="mdl-textfield__input" type="text" id="af_web_dp"> -->
+                        <select class="mdl-textfield__input" id="af_web_dp" name="af_web_dp">
+                            <option></option>
+                            <option value="https%3A%2F%2Fwww.amazon.com%2F">Amazon</option>
+                            <option value="https%3A%2F%2Fwww.yelp.com%2F">Yelp</option>
+                            <option value="https%3A%2F%2Fwww.google.com%2F">Google</option>
+                        </select>
+                        <label class="mdl-textfield__label" for="af_web_dp">Web</label>
+                    </div>
+
+                </div>
+            </div>
+            <div id="sectionBottom">
+                <div class="col1">
+                    <h3>Deeplink Value</h3>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect deeplink-radio" for="apples">
+                        <input type="radio" id="apples" class="mdl-radio__button" name="deep_link_value" value="apples">
+                        <span class="mdl-radio__label">Apples</span>
+                    </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect deeplink-radio" for="bananas">
+                        <input type="radio" id="bananas" class="mdl-radio__button" name="deep_link_value" value="bananas">
+                        <span class="mdl-radio__label">Bananas</span>
+                    </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect deeplink-radio" for="peaches">
+                        <input type="radio" id="peaches" class="mdl-radio__button" name="deep_link_value" value="peaches">
+                        <span class="mdl-radio__label">Peaches</span>
+                    </label>
+                    <!-- <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect deeplink-radio" for="custom">
+                        <input type="radio" id="custom" class="mdl-radio__button" name="deep_link_value" value="custom">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="deeplink_custom_value">
+                            <input class="mdl-textfield__input" type="text" id="custom_value" placeholder="Custom">
+                        </div>
+                    </label> -->
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <select class="mdl-textfield__input" id="af_num" name="af_num">
+                            <option></option>
+                            <option value="1">1</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="99">99</option>
+                        </select>
+                        <label class="mdl-textfield__label" for="af_num">Amount</label>
+                    </div>
+                </div>
+                <div class="col2">
+                    <h3>URL Output</h3>
+                    
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <a href="#" id="linkArea"><textarea class="mdl-textfield__input" type="text" rows= "3" id="output" readonly></textarea></a>
+                    </div>
+                    
+                    <button onclick="generateURL()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Generate QR</button>
+                </div>
+            </div>
+            <div id="sectionQR">
+                <div id="qrcode"></div>
+            </div>
+        </div>
+    </body>
+</html>
