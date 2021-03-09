@@ -23,7 +23,7 @@ body {
     justify-content: space-between;
 }
 
-#sectionBottom, #sectionMiddle, #sectionTop {
+#sectionBottom, #sectionMiddle, #sectionTop, #sectionQR {
     margin-top: 16px;
 }
 
