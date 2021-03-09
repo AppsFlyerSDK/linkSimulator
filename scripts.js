@@ -65,6 +65,8 @@ function generateURL() {
 
         document.getElementById("output").value = finalURL
 
+        document.getElementById("linkArea").href = finalURL
+
         const qrLocation = document.getElementById("qrcode")
 
         // Options
