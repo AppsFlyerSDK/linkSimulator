@@ -8,9 +8,13 @@ function getParamValue(input) {
 function loopParams(input, arr) {
     var output = input;
     for(i = 0; i < arr.length; i++) {
-        var value = getParamValue(arr[i]);
-        if (value) {
-            output += "&" + arr[i] + "=" + value
+        var key = arr[i];
+        var value = getParamValue(key);
+
+        if (!(['af_ios_url','af_android_url'].includes(key) && value == "default")) {
+            if (value) {
+                output += "&" + key + "=" + value
+            }
         }
     }
     return output
