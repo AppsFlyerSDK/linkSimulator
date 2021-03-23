@@ -44,7 +44,7 @@ function generateURL() {
     var url = getParamValue('baseURL');
     var pid = getParamValue('pid');
     var params = [
-        'c','af_sub1','af_ios_url','af_android_url','af_web_dp','af_num'
+        'c','af_sub1','af_ios_url','af_android_url','af_web_dp','deep_link_sub1'
         //,'af_channel','af_adset','af_ad'
     ]
 
