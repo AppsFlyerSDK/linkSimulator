@@ -27,7 +27,7 @@ body {
     margin-top: 16px;
 }
 
-.col1, .col2 {
+.col1, .col2, .col-full {
     border: 1px solid white;
     padding: 28px;
     border-radius: 6px;
@@ -41,6 +41,10 @@ body {
 
 .col2 {
     width: 60%;
+}
+
+.col-full {
+    width: 100%;
 }
 
 .mdl-textfield {
